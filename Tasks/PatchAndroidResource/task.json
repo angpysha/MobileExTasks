@@ -1,0 +1,47 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "ead66baa-5d9f-4088-a019-c457894416ab",
+    "name": "patchandroidresourcefile@1",
+    "friendlyName": "Patch android resource file",
+    "description": "Patch android resources",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Andrii Petrovskyi",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Echo $(samplestring)",
+    "inputs": [
+        {
+            "name": "sourcePath",
+            "type": "filePath",
+            "label": "Source file path",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Full path to resource file"
+        },
+        {
+            "name": "propertyName",
+            "type": "string",
+            "label": "Property name",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Property name"
+        },
+        {
+            "name": "propertyValue",
+            "type": "string",
+            "label": "Property value",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Property value"
+        }
+    ],
+    "execution": {
+        "Node10": {
+            "target": "task.js"
+        }
+    }
+}

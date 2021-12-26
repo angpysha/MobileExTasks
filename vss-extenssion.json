@@ -1,0 +1,37 @@
+{
+    "manifestVersion": 1,
+    "id": "angpysha-mobile-tasks",
+    "name": "Mobile tasks for Azure DevOps",
+    "version": "0.0.1",
+    "publisher": "AndriiPetrovskyi",
+    "public": false,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Additional mobile build tasks",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/smartphone.png"        
+    },
+    "files": [
+        {
+            "path": "Tasks/PatchAndroidResource"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "angpysha-patch-android-resource",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Tasks/PatchAndroidResource"
+            }
+        }
+    ]
+}
