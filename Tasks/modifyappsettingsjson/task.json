@@ -1,0 +1,55 @@
+{
+  "id": "c4f82b30-6683-11ec-bdf2-9512366357c6",
+  "name": "modifyappsettingsjson",
+  "friendlyName": "Modify application settings JSON",
+  "description": "Modify app setiings JSON file",
+  "author": "Andrii Petrovskyi",
+  "helpMarkDown": "Replace with markdown to show in help",
+  "category": "Utility",
+  "demands": [],
+  "version": {
+    "Major": "0",
+    "Minor": "1",
+    "Patch": "0"
+  },
+  "instanceNameFormat": "modifyappsettingsjson $(message)",
+  "inputs": [
+    {
+      "name": "sourceFile",
+      "type": "filePath",
+      "label": "Source file",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Source file for patch"
+    },
+    {
+      "name": "properties",
+      "type": "string",
+      "label": "Properties",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Each element should be on the new line"
+    },
+    {
+      "name": "values",
+      "type": "string",
+      "label": "Values",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Each element should be on the new line"
+    },
+    {
+      "name": "printFile",
+      "type": "boolean",
+      "label": "Print file",
+      "defaultValue": false,
+      "required": false
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "task.js",
+      "argumentFormat": ""
+    }
+  }
+}

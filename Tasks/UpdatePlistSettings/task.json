@@ -1,0 +1,47 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "148668da-3f26-4c82-b206-fbcddecd9779",
+    "name": "angpyshaupdateplistfile",
+    "friendlyName": "Update plist file",
+    "description": "Updates plist file using set of properties and values",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Andrii Petrovskyi",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Echo $(samplestring)",
+    "inputs": [
+        {
+            "name": "sourceFile",
+            "type": "filePath",
+            "label": "File path",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": ""
+        },
+        {
+            "name": "properties",
+            "type": "string",
+            "label": "Properties",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": ""
+        },
+        {
+            "name": "values",
+            "type": "string",
+            "label": "Values",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": ""
+        }
+    ],
+    "execution": {
+        "Node10": {
+            "target": "task.js"
+        }
+    }
+}

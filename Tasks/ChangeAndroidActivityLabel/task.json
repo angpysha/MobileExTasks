@@ -1,42 +1,42 @@
 {
     "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-    "id": "cc59947e-0410-4257-a21c-ac1a7ff1935a",
-    "name": "patchandroidresourcefile",
-    "friendlyName": "Patch android resource file",
-    "description": "Patch android resources",
+    "id": "1bd6f926-31a3-4895-8b39-f0f160304542",
+    "name": "changeandroidactivityname",
+    "friendlyName": "Change Android activity label",
+    "description": "Changes Android activity label",
     "helpMarkDown": "",
     "category": "Utility",
     "author": "Andrii Petrovskyi",
     "version": {
         "Major": 0,
-        "Minor": 1,
-        "Patch": 0
+        "Minor": 2,
+        "Patch": 2
     },
     "instanceNameFormat": "Echo $(samplestring)",
     "inputs": [
         {
-            "name": "sourcePath",
+            "name": "sourceFile",
             "type": "filePath",
-            "label": "Source file path",
-            "defaultValue": "",
+            "label": "Activity path",
+            "defaultValue": "**/MainActivity.cs",
             "required": true,
-            "helpMarkDown": "Full path to resource file"
+            "helpMarkDown": ""
         },
         {
-            "name": "propertyName",
+            "name": "oldActivityName",
             "type": "string",
-            "label": "Property name",
+            "label": "Old activity label",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": "Property name"
+            "helpMarkDown": ""
         },
         {
-            "name": "propertyValue",
+            "name": "newActivityName",
             "type": "string",
-            "label": "Property value",
+            "label": "New activity label",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": "Property value"
+            "helpMarkDown": ""
         },
         {
             "name": "printFile",
@@ -44,7 +44,7 @@
             "label": "Print file",
             "defaultValue": false,
             "required": false,
-            "helpMarkDown": "Print file"
+            "helpMarkDown": ""
         }
     ],
     "execution": {

@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "angpysha-mobile-tasks",
     "name": "Mobile tasks for Azure DevOps",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "AndriiPetrovskyi",
     "public": false,
     "targets": [
@@ -20,6 +20,12 @@
     "files": [
         {
             "path": "Tasks/PatchAndroidResource"
+        },
+        {
+            "path":"Tasks/ChangeAndroidActivityLabel"
+        }, 
+        {
+            "path":"Tasks/modifyappsettingsjson"
         }
     ],
     "contributions": [
@@ -31,6 +37,26 @@
             ],
             "properties": {
                 "name": "Tasks/PatchAndroidResource"
+            }
+        },
+        {
+            "id": "angpysha-change-android-activity-name",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Tasks/ChangeAndroidActivityLabel"
+            }
+        },
+        {
+            "id": "angpysha-update-config-json",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Tasks/modifyappsettingsjson"
             }
         }
     ]
